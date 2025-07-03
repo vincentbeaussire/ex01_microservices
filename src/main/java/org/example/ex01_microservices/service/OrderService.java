@@ -6,9 +6,16 @@ import org.example.ex01_microservices.model.Order;
 import org.example.ex01_microservices.model.Product;
 import org.example.ex01_microservices.util.RestClient;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 @Service
 public class OrderService {
+
+    private final RestTemplate restTemplate;
+
+    public OrderService(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 
     public Order getOrderById(int id){
         return new Order(id,"ma commande pour les vacances",2,5);
