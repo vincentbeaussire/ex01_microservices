@@ -3,6 +3,7 @@ package org.example.ex01_microservices.util;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.net.http.HttpHeaders;
 import java.util.List;
 
 public class RestClient<T> {
@@ -27,4 +28,5 @@ public class RestClient<T> {
         }
         return null;
     }
+}
 }
